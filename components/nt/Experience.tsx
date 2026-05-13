@@ -6,7 +6,7 @@ import { Star, Compass } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const WHATSAPP =
-  "https://wa.me/5535999999999?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
 
 export function Experience() {
   return (
@@ -21,22 +21,22 @@ export function Experience() {
             — A Experiência NT
           </div>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-ice leading-[1.05] text-balance">
-            Luxo náutico em{" "}
-            <span className="italic text-gold">cada detalhe.</span>
+            Capitólio vivido da{" "}
+            <span className="italic text-gold"> forma certa.</span>
           </h2>
           <p className="mt-8 text-lg text-ice/70 leading-relaxed font-light">
-            Nossa lancha foi pensada para quem busca mais do que um passeio:
-            uma experiência sensorial completa entre os paredões de Capitólio.
-            Bancos confortáveis, som premium, bebidas geladas e uma rota
-            desenhada para revelar os melhores ângulos da Represa de Furnas.
+            A FS YACHTS 290 Concept foi preparada para grupos de até 12 pessoas,
+            com som JBL, área gourmet, cooler completo e espaço confortável para
+            aproveitar no seu ritmo. Os roteiros passam por cânions, cachoeiras,
+            paradas para banho e pontos conhecidos da região.
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-6">
             {[
-              { k: "Capacidade", v: "Até 10 pessoas" },
-              { k: "Duração", v: "3h · 5h · Sunset" },
-              { k: "Conforto", v: "Som & cooler premium" },
-              { k: "Saída", v: "Capitólio · MG" },
+              { k: "Capacidade", v: "Até 12 pessoas" },
+              { k: "Duração", v: "Passeios de 3h a 7h" },
+              { k: "Conforto", v: "Som & cooler completo" },
+              { k: "Saída", v: "Porto Escarpas, Capitólio/MG" },
             ].map((d) => (
               <div key={d.k} className="border-l border-gold/40 pl-4">
                 <div className="text-[10px] uppercase tracking-[0.25em] text-gold/80">
@@ -58,16 +58,19 @@ export function Experience() {
           </a>
         </Reveal>
 
-        <Reveal delay={0.2} className="lg:col-span-7 order-1 lg:order-2 relative">
-          <div className="relative aspect-[4/5] md:aspect-[5/6] rounded-3xl overflow-hidden shadow-elegant">
+        <Reveal
+          delay={0.2}
+          className="lg:col-span-7 order-1 lg:order-2 relative"
+        >
+          <div className="relative aspect-4/5 md:aspect-5/6 rounded-3xl overflow-hidden shadow-elegant">
             <Image
-              src="/boat.jpg"
+              src="/boat.webp"
               alt="Lancha premium NT Passeios Náuticos parada em águas calmas de Furnas"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 60vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/40 to-transparent" />
           </div>
 
           <motion.div

@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Anchor, MessageCircle, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { MessageCircle, Menu, X } from "lucide-react";
 
 const links = [
   { href: "#experiencia", label: "Experiência" },
@@ -39,38 +41,38 @@ export function Navbar() {
             scrolled ? "glass shadow-deep" : "bg-transparent"
           }`}
         >
-          <a href="#top" className="flex items-center gap-2.5 group">
-            <div className="relative w-9 h-9 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
-              <Anchor className="w-4 h-4 text-[var(--gold-foreground)]" strokeWidth={2.5} />
-            </div>
-            <div className="leading-tight">
-              <div className="font-display text-xl tracking-wide text-ice">NT</div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-gold/90 -mt-0.5">Passeios</div>
-            </div>
-          </a>
+          <Link href="#" className="block">
+            <Image
+              src="/logo.webp"
+              alt="NT Passeios Náuticos"
+              width={200}
+              height={64}
+              className="h-16 w-auto"
+            />
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="text-[13px] uppercase tracking-[0.18em] text-ice/70 hover:text-gold transition-colors duration-300 relative group"
               >
                 {l.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-500 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <a
-            href="https://wa.me/5535999999999"
+          <Link
+            href="https://wa.me/5531997279740"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium text-[var(--gold-foreground)] glow-gold-hover"
+            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium text-(--gold-foreground) glow-gold-hover"
           >
             <MessageCircle className="w-4 h-4" />
             Reservar
-          </a>
+          </Link>
 
           <button
             className="lg:hidden text-ice"
@@ -84,23 +86,23 @@ export function Navbar() {
         {open && (
           <div className="lg:hidden mt-2 glass rounded-3xl p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="text-sm uppercase tracking-[0.18em] text-ice/80 hover:text-gold"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="https://wa.me/5535999999999"
+            <Link
+              href="https://wa.me/5531997279740"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-5 py-3 text-sm font-medium text-[var(--gold-foreground)]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-5 py-3 text-sm font-medium text-(--gold-foreground)"
             >
               <MessageCircle className="w-4 h-4" /> Reservar pelo WhatsApp
-            </a>
+            </Link>
           </div>
         )}
       </div>

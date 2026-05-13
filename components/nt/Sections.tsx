@@ -1,23 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Sailboat,
   ShieldCheck,
   Sun,
   Compass as CompassIcon,
   MapPin,
-  Sparkles,
   Wine,
   Music2,
   LifeBuoy,
   Snowflake,
   Fuel,
   Camera,
-  Anchor,
   Phone,
   Waves,
-  Globe,
-  MessageCircle,
+  Music4,
+  PawPrint,
+  Mail,
 } from "lucide-react";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { Reveal, CountUp } from "./Reveal";
 import { WaveDivider } from "./Compass";
 
@@ -28,17 +29,17 @@ export function Benefits() {
     {
       icon: Sailboat,
       label: "Lancha Premium",
-      sub: "Conforto e elegância a bordo",
+      sub: "Conforto, sofisticação e experiência completa",
     },
     {
       icon: ShieldCheck,
       label: "Piloto Certificado",
-      sub: "Mais de 10 anos de Furnas",
+      sub: "Piloto certificado pela Marinha do Brasil",
     },
     {
       icon: Sun,
       label: "Roteiros Exclusivos",
-      sub: "Cânions, lagoas e cachoeiras",
+      sub: "Cânions, águas cristalinas e cachoeiras",
     },
     {
       icon: CompassIcon,
@@ -69,34 +70,34 @@ export function Benefits() {
 
 const ROTEIROS = [
   {
-    title: "Cânions de Furnas",
-    img: "/canyons.jpg",
-    tag: "ICÔNICO",
-    desc: "Os monumentais paredões esculpidos pelas águas.",
+    title: "Cachoeira Lagoa Azul",
+    img: "/cachoeira-lagoa-azul.webp",
+    tag: "ÁGUAS CRISTALINAS",
+    desc: "Águas cristalinas, paredões naturais e uma das paisagens mais conhecidas da região.",
   },
   {
-    title: "Lagoa Azul",
-    img: "/lagoa-azul.jpg",
-    tag: "EXCLUSIVO",
-    desc: "Águas cristalinas em tom de safira escondidas na mata.",
+    title: "Cânions de Furnas",
+    img: "/canyons.webp",
+    tag: "CARTÃO-POSTAL",
+    desc: "Os cânions que marcaram Capitólio, vistos de perto pelas águas da represa.",
   },
   {
     title: "Vale dos Tucanos",
-    img: "/tucanos.jpg",
+    img: "/tucanos.webp",
     tag: "NATUREZA",
-    desc: "Vida selvagem ao redor de uma enseada serena.",
+    desc: "Trecho mais tranquilo da rota, cercado pela natureza e formações rochosas.",
   },
   {
-    title: "Cascatinha",
-    img: "/cachoeira.jpg",
-    tag: "REFRESCANTE",
-    desc: "Banho de cachoeira diretamente da lancha.",
+    title: "Cachoeira das Orquídeas",
+    img: "/cachoeira.webp",
+    tag: "PARADA PARA BANHO",
+    desc: "Parada para banho em meio às quedas d’água e vegetação da região.",
   },
   {
-    title: "Cachoeira da Ilha",
-    img: "/sunset.jpg",
-    tag: "ROMÂNTICO",
-    desc: "Pôr do sol exclusivo entre paredões dourados.",
+    title: "Bar Flutuante",
+    img: "/bar.webp",
+    tag: "PÔR DO SOL",
+    desc: "Ponto de pausa para aproveitar Furnas com música, bebidas e vista para a represa.",
   },
 ];
 
@@ -117,18 +118,18 @@ function RoteiroCard({
   return (
     <div
       className={`group relative overflow-hidden rounded-3xl shadow-deep ${
-        large ? "h-[640px]" : "h-[300px]"
+        large ? "h-160" : "h-75"
       }`}
     >
       <Image
         src={img}
         alt={title}
         fill
-        className="object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110"
+        className="object-cover transition-transform duration-1500 ease-out group-hover:scale-110"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-[var(--deep)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-tr from-(--deep)/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
       <div className="absolute top-6 left-6 inline-flex items-center gap-2 glass-light rounded-full px-3 py-1.5">
         <span className="w-1 h-1 rounded-full bg-gold" />
@@ -159,10 +160,7 @@ function RoteiroCard({
 
 export function Roteiros() {
   return (
-    <section
-      id="roteiros"
-      className="relative py-32 md:py-40 px-6"
-    >
+    <section id="roteiros" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
@@ -172,8 +170,7 @@ export function Roteiros() {
               </div>
               <h2 className="font-display text-5xl md:text-7xl text-ice leading-[1.05] text-balance max-w-3xl">
                 Cinco paradas. Uma{" "}
-                <span className="italic text-gold">só rota</span>{" "}
-                inesquecível.
+                <span className="italic text-gold">só rota</span> inesquecível.
               </h2>
             </div>
             <div className="font-mono text-xs text-ice/40 tracking-widest hidden md:block">
@@ -211,21 +208,27 @@ export function Roteiros() {
 /* ---------------- TIMELINE ---------------- */
 
 const STEPS = [
-  { t: "Reserve", d: "Pelo WhatsApp escolha data, horário e roteiro." },
-  { t: "Embarque", d: "Recepção exclusiva no nosso ponto em Capitólio." },
-  { t: "Navegue", d: "Cânions, paradas para banho e fotos cinematográficas." },
   {
-    t: "Brinde",
-    d: "Pôr do sol com bebida e som — em alto-mar de Furnas.",
+    t: "Reserva",
+    d: "Entre em contato pelo WhatsApp para escolher a data, duração e roteiro do passeio.",
+  },
+  {
+    t: "Embarque",
+    d: "A saída acontece pelo Porto Escarpas, em Capitólio/MG.",
+  },
+  {
+    t: "Passeio",
+    d: "O roteiro passa por cânions, cachoeiras, paradas para banho e outros pontos de Furnas.",
+  },
+  {
+    t: "Retorno",
+    d: "Finalize o passeio aproveitando o visual da represa e o clima de Capitólio.",
   },
 ];
 
 export function Timeline() {
   return (
-    <section
-      id="como-funciona"
-      className="relative py-32 md:py-40 px-6"
-    >
+    <section id="como-funciona" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="text-center mb-20">
@@ -264,9 +267,7 @@ export function Timeline() {
                   <div className="mx-auto md:mx-0 relative w-20 h-20 rounded-full bg-deep border border-gold/40 flex items-center justify-center font-display text-2xl text-gold shadow-gold">
                     {String(i + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="font-display text-2xl text-ice mt-6">
-                    {s.t}
-                  </h3>
+                  <h3 className="font-display text-2xl text-ice mt-6">{s.t}</h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                     {s.d}
                   </p>
@@ -286,32 +287,32 @@ const DIFF_ITEMS = [
   {
     icon: Sailboat,
     t: "Lancha Premium",
-    d: "Embarcação completa, segura e confortável para grupos exclusivos.",
+    d: "FS YACHTS 290 Concept 2026 com espaço confortável para grupos de até 12 pessoas.",
   },
   {
     icon: ShieldCheck,
-    t: "Segurança Total",
-    d: "Coletes, sinalizadores e equipamentos certificados a bordo.",
+    t: "Navegação Segura",
+    d: "Piloto certificado pela Marinha do Brasil, com equipamentos obrigatórios e coletes higienizados a bordo.",
   },
   {
-    icon: CompassIcon,
-    t: "Roteiros Sob Medida",
-    d: "Personalizamos cada passeio conforme o seu desejo.",
+    icon: Waves,
+    t: "Jet Ski Opcional",
+    d: "Moto aquática disponível como adicional para complementar a experiência durante o passeio.",
   },
   {
-    icon: Sparkles,
-    t: "Atendimento VIP",
-    d: "Detalhes pensados para tornar cada minuto memorável.",
+    icon: LifeBuoy,
+    t: "Tapete Flutuante",
+    d: "Tapete flutuante disponível para locação durante as paradas para banho.",
   },
   {
-    icon: Sun,
-    t: "Horários Estratégicos",
-    d: "Nascer e pôr do sol agendados para você.",
+    icon: Music4,
+    t: "Som & Área Gourmet",
+    d: "Estrutura com som JBL, cooler, geleira e espaço gourmet completo a bordo.",
   },
   {
-    icon: Camera,
-    t: "Fotos Inclusas",
-    d: "Pacote opcional com drone e edição cinematográfica.",
+    icon: PawPrint,
+    t: "Pet Friendly",
+    d: "Seu pet também pode aproveitar o passeio com conforto e segurança.",
   },
 ];
 
@@ -330,8 +331,8 @@ export function Differentials() {
               </h2>
             </div>
             <p className="text-ice/70 font-light text-lg max-w-md">
-              Cada passeio é desenhado com a obsessão por detalhes de quem
-              acredita que turismo náutico é, antes de tudo, uma arte.
+              Passeios com embarcação premium, condução profissional e estrutura
+              preparada para aproveitar Capitólio com mais conforto e segurança.
             </p>
           </div>
         </Reveal>
@@ -363,16 +364,16 @@ export function Differentials() {
 
 export function Stats() {
   const stats = [
-    { n: 1200, s: "+", l: "Passeios realizados" },
+    { n: 1000, s: "+", l: "Horas náuticas em Furnas" },
     { n: 5, s: ".0", l: "Avaliação média" },
-    { n: 10, s: "+", l: "Anos de experiência" },
+    { n: 15, s: "+", l: "Anos de experiência" },
     { n: 100, s: "%", l: "Clientes satisfeitos" },
   ];
   return (
     <section className="relative py-24 md:py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 opacity-30">
         <Image
-          src="/sunset.jpg"
+          src="/sunset.webp"
           alt=""
           fill
           className="object-cover"
@@ -400,27 +401,35 @@ export function Stats() {
 
 const TIPOS = [
   {
-    t: "Sunset Experience",
-    d: "3h navegando até o pôr do sol entre paredões.",
-    img: "/sunset.jpg",
-    price: "Sob consulta",
+    t: "Passeio Completo",
+    d: "Roteiro de 7 horas passando pelos Cânions, Vale dos Tucanos, bar flutuante e pôr do sol em Furnas.",
+    img: "/experiencia1.webp",
+    time: "7 horas",
   },
   {
-    t: "Tour Completo",
-    d: "5h passando por todos os pontos icônicos.",
-    img: "/canyons.jpg",
-    price: "Sob consulta",
+    t: "Cachoeira da Ilha",
+    d: "Passeio de 3h a 4h com paradas para banho e roteiro passando pela Cachoeira da Ilha.",
+    img: "/experiencia2.webp",
+    time: "3h a 4h",
   },
   {
-    t: "Day Cruise Privativo",
-    d: "Dia inteiro com roteiro 100% personalizado.",
-    img: "/experience.jpg",
-    price: "Sob consulta",
+    t: "Combo Náutico",
+    d: "Experiência combinando lancha e moto aquática durante o passeio pelas águas de Furnas.",
+    img: "/experiencia3.webp",
+    time: "7 horas",
+  },
+  {
+    t: "Cachoeira Combo",
+    d: "Roteiro pelas cachoeiras da região com experiência de jet ski durante o passeio.",
+    img: "/experiencia4.webp",
+    time: "7 horas",
   },
 ];
 
 const WHATSAPP =
-  "https://wa.me/5535999999999?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+
+/* ---------------- COMPONENT ---------------- */
 
 export function Tipos() {
   return (
@@ -429,43 +438,50 @@ export function Tipos() {
         <Reveal>
           <div className="mb-16 text-center">
             <div className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
-              — Tipos de Passeio
+              Tipos de Passeio
             </div>
+
             <h2 className="font-display text-5xl md:text-7xl text-ice text-balance">
-              Escolha o seu <span className="italic text-gold">ritmo.</span>
+              Passeios pelas águas de Furnas.
             </h2>
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           {TIPOS.map((t, i) => (
             <Reveal key={t.t} delay={i * 0.1}>
-              <div className="group relative h-[520px] rounded-3xl overflow-hidden shadow-deep">
+              <div className="group relative h-130 rounded-3xl overflow-hidden shadow-deep">
                 <Image
                   src={t.img}
                   alt={t.t}
                   fill
-                  className="object-cover transition-transform duration-[1500ms] group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10" />
+
+                <div className="absolute inset-0 bg-linear-to-t from-background via-background/50 to-background/10" />
+
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-3">
-                    Pacote · 0{i + 1}
+                    Passeio · 0{i + 1}
                   </div>
-                  <h3 className="font-display text-3xl md:text-4xl text-ice">
-                    {t.t}
-                  </h3>
-                  <p className="mt-3 text-ice/70 text-sm font-light">{t.d}</p>
+
+                  <h3 className="font-display text-3xl text-ice">{t.t}</h3>
+
+                  <p className="mt-3 text-ice/70 text-sm leading-relaxed">
+                    {t.d}
+                  </p>
+
                   <div className="mt-6 flex items-center justify-between">
                     <div className="font-mono text-xs text-ice/50">
-                      {t.price}
+                      {t.time}
                     </div>
+
                     <a
                       href={WHATSAPP}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-gold hover:text-ice"
+                      className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-gold hover:text-ice transition-colors"
                     >
                       Reservar
                       <span className="w-6 h-px bg-current transition-all group-hover:w-10" />
@@ -486,7 +502,7 @@ export function Tipos() {
 const INCLUSOS = [
   { i: Snowflake, t: "Cooler com gelo" },
   { i: Wine, t: "Bebidas geladas" },
-  { i: Music2, t: "Som premium Bluetooth" },
+  { i: Music2, t: "Som Bluetooth" },
   { i: LifeBuoy, t: "Coletes salva-vidas" },
   { i: Sailboat, t: "Boia rebocável" },
   { i: Fuel, t: "Combustível incluso" },
@@ -518,7 +534,7 @@ export function Inclusos() {
                 key={it.t}
                 className="bg-background p-6 flex items-center gap-4 group hover:bg-card transition-colors"
               >
-                <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-[var(--gold-foreground)] transition-all">
+                <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-(--gold-foreground) transition-all">
                   <it.i className="w-4 h-4" />
                 </div>
                 <span className="text-ice/85 text-sm">{it.t}</span>
@@ -535,23 +551,20 @@ export function Inclusos() {
 
 export function Pilot() {
   return (
-    <section
-      id="piloto"
-      className="relative py-32 md:py-40 px-6"
-    >
+    <section id="piloto" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 items-center">
         <Reveal className="lg:col-span-5">
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
+          <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-elegant">
             <Image
-              src="/pilot.jpg"
+              src="/piloto.webp"
               alt="Capitão da NT Passeios Náuticos"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/50 to-transparent" />
             <div className="absolute bottom-6 left-6 glass-light rounded-full px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-ice">
-              Capitão · NT
+              Capitão
             </div>
           </div>
         </Reveal>
@@ -564,16 +577,16 @@ export function Pilot() {
             <span className="italic text-gold">faz toda a diferença.</span>
           </h2>
           <p className="mt-8 text-ice/75 text-lg font-light leading-relaxed">
-            Mais de uma década navegando pelas águas de Furnas. Conhece cada
-            curva da represa, cada melhor ângulo da luz e os pontos secretos
-            que só os locais sabem. À frente da NT, condução técnica, atenção
-            humana e paixão pela região em cada saída.
+            Edson Maciel é o responsável pela condução. Marinheiro profissional
+            certificado pela Marinha do Brasil, realiza passeios pelas águas de
+            Furnas com foco em segurança, atenção aos passageiros e uma
+            navegação tranquila pelos principais pontos da região.
           </p>
           <div className="mt-10 grid grid-cols-3 gap-6">
             {[
-              { k: "10+", l: "Anos em Furnas" },
-              { k: "1.2k+", l: "Passeios" },
-              { k: "5.0", l: "Avaliação" },
+              { k: "15+", l: "Anos de experiência" },
+              { k: "1.036+", l: "Horas náuticas" },
+              { k: "MAF", l: "Certificação Marinha" },
             ].map((m) => (
               <div key={m.l} className="border-t border-gold/40 pt-4">
                 <div className="font-display text-3xl text-gold">{m.k}</div>
@@ -599,19 +612,15 @@ export function Footer() {
       </div>
       <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center">
-              <Anchor className="w-4 h-4 text-[var(--gold-foreground)]" />
-            </div>
-            <div>
-              <div className="font-display text-2xl text-ice">
-                NT Passeios Náuticos
-              </div>
-              <div className="text-[11px] uppercase tracking-[0.3em] text-gold/80">
-                Capitólio · MG
-              </div>
-            </div>
-          </div>
+          <Link href="#">
+            <Image
+              src="/logo.webp"
+              alt="NT Passeios Náuticos"
+              width={240}
+              height={80}
+              className="h-20 w-auto"
+            />
+          </Link>
           <p className="mt-6 text-ice/65 font-light max-w-md leading-relaxed">
             Uma experiência náutica premium pela Represa de Furnas — cânions,
             cachoeiras e pôr do sol em uma jornada inesquecível.
@@ -627,29 +636,29 @@ export function Footer() {
           </div>
           <ul className="space-y-3 text-ice/75 text-sm">
             <li>
-              <a href="#experiencia" className="hover:text-gold">
+              <Link href="#experiencia" className="hover:text-gold">
                 A Experiência
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#roteiros" className="hover:text-gold">
+              <Link href="#roteiros" className="hover:text-gold">
                 Roteiros
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#galeria" className="hover:text-gold">
+              <Link href="#galeria" className="hover:text-gold">
                 Galeria
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#piloto" className="hover:text-gold">
+              <Link href="#piloto" className="hover:text-gold">
                 Piloto
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#faq" className="hover:text-gold">
+              <Link href="#faq" className="hover:text-gold">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -660,7 +669,10 @@ export function Footer() {
           </div>
           <ul className="space-y-3 text-ice/75 text-sm">
             <li className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-gold" /> +55 (35) 9999-9999
+              <Phone className="w-4 h-4 text-gold" /> +55 (31) 99727-9740
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="w-4 h-4 text-gold" /> ntpasseios@gmail.com
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="w-4 h-4 text-gold" /> Capitólio, Minas Gerais
@@ -671,24 +683,37 @@ export function Footer() {
           </ul>
           <div className="mt-6 flex gap-3">
             <a
-              href="#"
-              className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
-            >
-              <Globe className="w-4 h-4" />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
-            >
-              <Camera className="w-4 h-4" />
-            </a>
-            <a
-              href="https://wa.me/5535999999999"
+              href="https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT."
               target="_blank"
               rel="noreferrer"
               className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
             >
-              <MessageCircle className="w-4 h-4" />
+              <FaWhatsapp className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/ntpasseioscapitolio"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
+            >
+              <FaInstagram className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@ntpasseioscapitolio"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
+            >
+              <FaTiktok className="w-4 h-4" />
+            </a>
+            <a
+              href="mailto:ntpasseios@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
+            >
+              <Mail className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -699,7 +724,17 @@ export function Footer() {
           © {new Date().getFullYear()} NT Passeios Náuticos · Todos os direitos
           reservados
         </span>
-        <span className="font-mono">Made with care in Capitólio</span>
+        <span className="font-mono">
+          Desenvolvido por{" "}
+          <a
+            href="https://www.fullseek.com.br/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-gold"
+          >
+            FullSeek
+          </a>
+        </span>
       </div>
     </footer>
   );
@@ -708,7 +743,7 @@ export function Footer() {
 /* ---------------- FLOATING WHATSAPP ---------------- */
 
 const WHATSAPP_LINK =
-  "https://wa.me/5535999999999?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
 
 export function FloatingWhatsApp() {
   return (
@@ -721,8 +756,8 @@ export function FloatingWhatsApp() {
     >
       <span className="relative flex">
         <span className="absolute inline-flex h-full w-full rounded-full bg-gold/40 opacity-75 animate-ping" />
-        <span className="relative inline-flex w-14 h-14 rounded-full bg-gradient-gold items-center justify-center text-[var(--gold-foreground)] shadow-gold glow-gold-hover">
-          <MessageCircle className="w-6 h-6" />
+        <span className="relative inline-flex w-14 h-14 rounded-full bg-gradient-gold items-center justify-center text-(--gold-foreground) shadow-gold glow-gold-hover">
+          <FaWhatsapp className="w-6 h-6" />
         </span>
       </span>
     </a>

@@ -7,7 +7,7 @@ import { MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const WHATSAPP =
-  "https://wa.me/5535999999999?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
 
 export function FinalCTA() {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,18 +19,18 @@ export function FinalCTA() {
   return (
     <section
       ref={ref}
-      className="relative h-[90vh] min-h-[600px] w-full overflow-hidden"
+      className="relative h-[90vh] min-h-150 w-full overflow-hidden"
     >
       <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%]">
         <Image
-          src="/sunset.jpg"
+          src="/sunset.webp"
           alt="Pôr do sol em Capitólio"
           fill
           className="object-cover"
           sizes="100vw"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
+      <div className="absolute inset-0 bg-linear-to-t from-background via-background/70 to-background/40" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
         <Reveal>
           <div className="text-[11px] uppercase tracking-[0.35em] text-gold mb-6">
@@ -53,7 +53,7 @@ export function FinalCTA() {
             href={WHATSAPP}
             target="_blank"
             rel="noreferrer"
-            className="mt-10 inline-flex items-center gap-3 rounded-full bg-gradient-gold px-10 py-5 text-[var(--gold-foreground)] font-medium text-lg glow-gold-hover"
+            className="mt-10 inline-flex items-center gap-3 rounded-full bg-gradient-gold px-10 py-5 text-(--gold-foreground) font-medium text-lg glow-gold-hover"
           >
             <MessageCircle className="w-5 h-5" />
             Reservar pelo WhatsApp

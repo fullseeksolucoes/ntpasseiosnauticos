@@ -6,17 +6,17 @@ import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const GALLERY = [
-  "/hero-canyons.jpg",
-  "/gallery1.jpg",
-  "/lagoa-azul.jpg",
-  "/gallery2.jpg",
-  "/sunset.jpg",
-  "/cachoeira.jpg",
-  "/gallery3.jpg",
-  "/canyons.jpg",
-  "/tucanos.jpg",
-  "/boat.jpg",
-  "/experience.jpg",
+  "/galeria1.webp",
+  "/galeria2.webp",
+  "/galeria5.webp",
+  "/galeria11.webp",
+  "/galeria6.webp",
+  "/galeria9.webp",
+  "/galeria3.webp",
+  "/galeria7.webp",
+  "/galeria10.webp",
+  "/galeria8.webp",
+  "/galeria4.webp",
 ];
 
 export function Gallery() {
@@ -38,7 +38,7 @@ export function Gallery() {
           </div>
         </Reveal>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:_balance]">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [column-fill:balance]">
           {GALLERY.map((src, i) => (
             <Reveal
               key={i}
@@ -46,7 +46,7 @@ export function Gallery() {
               className="mb-5 break-inside-avoid"
             >
               <button
-                onClick={() => setOpen(i)}
+                // onClick={() => setOpen(i)}
                 className="group relative block w-full overflow-hidden rounded-2xl shadow-deep"
               >
                 <Image
@@ -56,7 +56,7 @@ export function Gallery() {
                   height={600}
                   className="w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-ice opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                   <span className="font-mono text-[10px] tracking-widest">
                     FRAME · {String(i + 1).padStart(2, "0")}
@@ -69,7 +69,7 @@ export function Gallery() {
         </div>
       </div>
 
-      {open !== null && (
+      {/* {open !== null && (
         <div
           className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex items-center justify-center p-6 animate-in fade-in duration-300"
           onClick={() => setOpen(null)}
@@ -107,7 +107,7 @@ export function Gallery() {
             onClick={(e) => e.stopPropagation()}
           />
         </div>
-      )}
+      )} */}
     </section>
   );
 }

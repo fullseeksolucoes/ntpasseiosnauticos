@@ -8,33 +8,34 @@ import { Reveal } from "./Reveal";
 const FAQS = [
   {
     q: "Como faço para reservar?",
-    a: "Reserve diretamente pelo WhatsApp. Confirmamos data, horário e detalhes do roteiro em poucos minutos.",
+    a: "A reserva é feita diretamente pelo WhatsApp. Após a confirmação, alinhamos data, horário e detalhes do passeio.",
   },
   {
     q: "Quantas pessoas cabem na lancha?",
-    a: "Acomodamos até 10 pessoas com conforto. Para grupos maiores, organizamos embarcações adicionais.",
+    a: "A embarcação comporta até 12 pessoas com conforto e segurança.",
   },
   {
     q: "O que está incluso?",
-    a: "Combustível, piloto, coletes, cooler com gelo, som premium e boia rebocável. Bebidas e fotos profissionais opcionais.",
+    a: "O passeio inclui combustível, piloto certificado, coletes higienizados, cooler com gelo, som JBL e área gourmet a bordo.",
   },
   {
-    q: "Funciona em dias nublados?",
-    a: "Sim. Em casos de chuva intensa ou alerta meteorológico, remarcamos sem custo.",
+    q: "Posso levar meu pet?",
+    a: "Sim. A NT Passeios Náuticos é pet friendly e seu pet também pode aproveitar o passeio.",
   },
   {
-    q: "Tem ponto de partida fixo?",
-    a: "Saímos de píer próprio em Capitólio. Enviamos a localização exata após a confirmação.",
+    q: "O passeio acontece em dias nublados?",
+    a: "Sim. A embarcação possui área cabinada para maior conforto durante o passeio.",
+  },
+  {
+    q: "Qual é o ponto de saída?",
+    a: "As saídas acontecem pelo Porto Escarpas, em Capitólio/MG.",
   },
 ];
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section
-      id="faq"
-      className="relative py-32 md:py-40 px-6"
-    >
+    <section id="faq" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <div className="text-center mb-16">
