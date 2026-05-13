@@ -41,10 +41,10 @@ export function Navbar() {
             scrolled ? "glass shadow-deep" : "bg-transparent"
           }`}
         >
-          <Link href="#" className="block">
+          <Link href="#" aria-label="Página inicial NT Passeios Náuticos" className="block">
             <Image
               src="/logo.webp"
-              alt="NT Passeios Náuticos"
+              alt="NT Passeios Náuticos - Passeios pela Represa de Furnas"
               width={200}
               height={64}
               className="h-16 w-auto"
@@ -64,15 +64,16 @@ export function Navbar() {
             ))}
           </nav>
 
-          <Link
+          <a
             href="https://wa.me/5531997279740"
             target="_blank"
             rel="noreferrer"
+            aria-label="Reserve pelo WhatsApp"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium text-(--gold-foreground) glow-gold-hover"
           >
             <MessageCircle className="w-4 h-4" />
             Reservar
-          </Link>
+          </a>
 
           <button
             className="lg:hidden text-ice"
@@ -95,14 +96,15 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <Link
+            <a
               href="https://wa.me/5531997279740"
               target="_blank"
               rel="noreferrer"
+              aria-label="Reserve pelo WhatsApp"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-5 py-3 text-sm font-medium text-(--gold-foreground)"
             >
               <MessageCircle className="w-4 h-4" /> Reservar pelo WhatsApp
-            </Link>
+            </a>
           </div>
         )}
       </div>

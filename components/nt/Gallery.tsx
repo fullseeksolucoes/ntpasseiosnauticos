@@ -8,15 +8,15 @@ import { Reveal } from "./Reveal";
 const GALLERY = [
   "/galeria1.webp",
   "/galeria2.webp",
-  "/galeria5.webp",
-  "/galeria11.webp",
-  "/galeria6.webp",
-  "/galeria9.webp",
   "/galeria3.webp",
-  "/galeria7.webp",
-  "/galeria10.webp",
-  "/galeria8.webp",
   "/galeria4.webp",
+  "/galeria5.webp",
+  "/galeria6.webp",
+  "/galeria7.webp",
+  "/galeria8.webp",
+  "/galeria9.webp",
+  "/galeria10.webp",
+  "/galeria11.webp",
 ];
 
 export function Gallery() {
@@ -51,7 +51,7 @@ export function Gallery() {
               >
                 <Image
                   src={src}
-                  alt={`Passeio NT ${i + 1}`}
+                  alt={`Galeria de fotos NT Passeios Náuticos - Passeio em Capitólio ${i + 1}`}
                   width={800}
                   height={600}
                   className="w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"

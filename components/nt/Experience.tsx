@@ -51,6 +51,7 @@ export function Experience() {
             href={WHATSAPP}
             target="_blank"
             rel="noreferrer"
+            aria-label="Reserve sua data pelo WhatsApp"
             className="mt-10 inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-ice hover:text-gold group"
           >
             <span className="w-10 h-px bg-gold transition-all duration-500 group-hover:w-16" />

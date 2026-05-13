@@ -481,6 +481,7 @@ export function Tipos() {
                       href={WHATSAPP}
                       target="_blank"
                       rel="noreferrer"
+                      aria-label="Reservar este passeio pelo WhatsApp"
                       className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-gold hover:text-ice transition-colors"
                     >
                       Reservar
@@ -612,10 +613,10 @@ export function Footer() {
       </div>
       <div className="mx-auto max-w-7xl grid md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
-          <Link href="#">
+          <Link href="#" aria-label="Página inicial NT Passeios Náuticos">
             <Image
               src="/logo.webp"
-              alt="NT Passeios Náuticos"
+              alt="NT Passeios Náuticos - Passeios pela Represa de Furnas"
               width={240}
               height={80}
               className="h-20 w-auto"
@@ -686,6 +687,7 @@ export function Footer() {
               href="https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT."
               target="_blank"
               rel="noreferrer"
+              aria-label="Fale conosco pelo WhatsApp"
               className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
             >
               <FaWhatsapp className="w-4 h-4" />
@@ -694,6 +696,7 @@ export function Footer() {
               href="https://www.instagram.com/ntpasseioscapitolio"
               target="_blank"
               rel="noreferrer"
+              aria-label="Siga-nos no Instagram"
               className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
             >
               <FaInstagram className="w-4 h-4" />
@@ -703,6 +706,7 @@ export function Footer() {
               href="https://www.tiktok.com/@ntpasseioscapitolio"
               target="_blank"
               rel="noreferrer"
+              aria-label="Siga-nos no TikTok"
               className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
             >
               <FaTiktok className="w-4 h-4" />
@@ -711,6 +715,7 @@ export function Footer() {
               href="mailto:ntpasseios@gmail.com"
               target="_blank"
               rel="noreferrer"
+              aria-label="Envie um e-mail para NT Passeios Náuticos"
               className="w-10 h-10 rounded-full border border-border hover:border-gold hover:text-gold flex items-center justify-center transition-colors text-ice"
             >
               <Mail className="w-4 h-4" />
@@ -730,6 +735,7 @@ export function Footer() {
             href="https://www.fullseek.com.br/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Desenvolvido por FullSeek - agência de tecnologia"
             className="hover:text-gold"
           >
             FullSeek
