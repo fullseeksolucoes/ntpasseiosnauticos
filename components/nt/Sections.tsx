@@ -90,14 +90,14 @@ const ROTEIROS = [
   {
     title: "Cascatinha",
     img: "/cascatinha.webp",
-    tag: "PARADA PARA BANHO",
-    desc: "Parada para banho em meio às quedas d’água e vegetação da região.",
+    tag: "QUEDA D’ÁGUA",
+    desc: "Parada com águas calmas e pequena queda d’água cercada pelas formações naturais de Furnas.",
   },
   {
     title: "Cachoeira da Ilha",
     img: "/cachoeira-ilha.webp",
-    tag: "PARADA PARA BANHO",
-    desc: "Parada para banho em meio às quedas d’água e vegetação da região.",
+    tag: "BANHO",
+    desc: "Um dos pontos mais procurados da região, com parada para banho e vista para os paredões de Furnas.",
   },
   {
     title: "Bar Flutuante",
@@ -420,16 +420,16 @@ const TIPOS = [
     img: "/experiencia3.webp",
     time: "7 horas",
   },
-  {
-    t: "Cachoeira Combo",
-    d: "Roteiro pelas cachoeiras da região com experiência de jet ski durante o passeio.",
-    img: "/experiencia4.webp",
-    time: "7 horas",
-  },
+  // {
+  //   t: "Cachoeira Combo",
+  //   d: "Roteiro pelas cachoeiras da região com experiência de jet ski durante o passeio.",
+  //   img: "/experiencia4.webp",
+  //   time: "7 horas",
+  // },
 ];
 
 const WHATSAPP =
-  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20passeios%20com%20a%20NT";
 
 /* ---------------- COMPONENT ---------------- */
 
@@ -449,7 +449,7 @@ export function Tipos() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-1 xl:grid-cols-3 gap-6">
           {TIPOS.map((t, i) => (
             <Reveal key={t.t} delay={i * 0.1}>
               <div className="group relative h-130 rounded-3xl overflow-hidden shadow-deep">
@@ -684,7 +684,7 @@ export function Footer() {
           </ul>
           <div className="mt-6 flex gap-3">
             <a
-              href="https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT."
+              href="https://wa.me/5531997279740?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20passeios%20com%20a%20NT"
               target="_blank"
               rel="noreferrer"
               aria-label="Fale conosco pelo WhatsApp"
@@ -749,7 +749,7 @@ export function Footer() {
 /* ---------------- FLOATING WHATSAPP ---------------- */
 
 const WHATSAPP_LINK =
-  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20passeios%20com%20a%20NT";
 
 export function FloatingWhatsApp() {
   return (

@@ -6,7 +6,7 @@ import { Star, Compass } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const WHATSAPP =
-  "https://wa.me/5531997279740?text=Olá!%20Quero%20reservar%20um%20passeio%20com%20a%20NT.";
+  "https://wa.me/5531997279740?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20passeios%20com%20a%20NT";
 
 export function Experience() {
   return (

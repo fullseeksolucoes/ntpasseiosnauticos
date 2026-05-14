@@ -167,7 +167,7 @@ const jsonLd = {
           name: "O que está incluso?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "O passeio inclui combustível, piloto certificado, coletes higienizados, cooler com gelo, som JBL e área gourmet a bordo.",
+            text: "O passeio inclui combustível, piloto certificado, coletes higienizados, som JBL, churrasqueira, starlink e área gourmet a bordo.",
           },
         },
         {

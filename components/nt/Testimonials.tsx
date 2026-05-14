@@ -9,22 +9,22 @@ const TESTIMONIALS = [
   {
     n: "Marina S.",
     c: "São Paulo · SP",
-    q: "Foi o ponto alto da nossa viagem. Detalhe impressionante em cada momento, do recebimento ao pôr do sol cinematográfico.",
+    q: "O ponto alto da nossa viagem. Cada detalhe foi pensado, do início ao pôr do sol. O Edson é um gentleman.",
   },
   {
     n: "Rafael M.",
     c: "Belo Horizonte · MG",
-    q: "Levei a família e amigos. Lancha impecável, capitão atencioso e roteiro que mostrou Capitólio como nunca tínhamos visto.",
+    q: "Melhor passeio que já fiz em Minas. Lancha novinha, som top, e o Edson sabe cada canto de Capitólio.",
   },
   {
     n: "Camila & João",
     c: "Rio de Janeiro · RJ",
-    q: "Pedimos o sunset privativo e foi mágico. Sentimos um luxo silencioso, sem perder a aventura.",
+    q: "O Pôr do sol na represa não tem preço.",
   },
   {
     n: "Ana P.",
-    c: "Curitiba · PR",
-    q: "Profissionalismo nota dez. Volto com certeza — e dessa vez por dois dias inteiros.",
+    c: "Belo Horizonte · MG",
+    q: "Já fiz outros passeios em Capitólio, esse foi o mais organizado. Segurança, conforto e simpatia o tempo todo.",
   },
 ];
 
