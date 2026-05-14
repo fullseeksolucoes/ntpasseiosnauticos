@@ -79,9 +79,8 @@ export function Hero() {
 
           <Reveal delay={0.35}>
             <p className="mt-8 max-w-xl text-lg md:text-xl text-ice/75 font-light leading-relaxed">
-              Passeios náuticos exclusivos pela Represa de Furnas — entre
-              cânions monumentais, águas cristalinas e pôr do sol
-              cinematográfico.
+              Passeios náuticos exclusivos pela Represa de Furnas. Cânions
+              monumentais, águas cristalinas e pôr do sol cinematográfico.
             </p>
           </Reveal>
 
@@ -115,19 +114,20 @@ export function Hero() {
                 <ShieldCheck className="w-3 h-3 text-gold" /> Piloto Certificado
               </span>
               <span className="flex items-center gap-2">
-                <Sparkles className="w-3 h-3 text-gold" /> Mais de 1200 passeios
+                <Sparkles className="w-3 h-3 text-gold" /> Mais de 1200 horas
+                náuticas
               </span>
             </div>
           </Reveal>
         </div>
       </motion.div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
         <div className="w-px h-12 bg-linear-to-b from-transparent via-gold to-transparent animate-pulse" />
         <span className="text-[10px] uppercase tracking-[0.3em] text-ice/50">
           Role
         </span>
-      </div>
+      </div> */}
     </section>
   );
 }

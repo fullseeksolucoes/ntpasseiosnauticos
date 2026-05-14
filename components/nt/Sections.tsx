@@ -76,7 +76,7 @@ const ROTEIROS = [
     desc: "Águas cristalinas, paredões naturais e uma das paisagens mais conhecidas da região.",
   },
   {
-    title: "Cânions de Furnas",
+    title: "Cânions de Capitólio",
     img: "/canyons.webp",
     tag: "CARTÃO-POSTAL",
     desc: "Os cânions que marcaram Capitólio, vistos de perto pelas águas da represa.",
@@ -88,8 +88,14 @@ const ROTEIROS = [
     desc: "Trecho mais tranquilo da rota, cercado pela natureza e formações rochosas.",
   },
   {
-    title: "Cachoeira das Orquídeas",
-    img: "/cachoeira.webp",
+    title: "Cascatinha",
+    img: "/cascatinha.webp",
+    tag: "PARADA PARA BANHO",
+    desc: "Parada para banho em meio às quedas d’água e vegetação da região.",
+  },
+  {
+    title: "Cachoeira da Ilha",
+    img: "/cachoeira-ilha.webp",
     tag: "PARADA PARA BANHO",
     desc: "Parada para banho em meio às quedas d’água e vegetação da região.",
   },
@@ -169,7 +175,7 @@ export function Roteiros() {
                 — Roteiros & Destinos
               </div>
               <h2 className="font-display text-5xl md:text-7xl text-ice leading-[1.05] text-balance max-w-3xl">
-                Cinco paradas. Uma{" "}
+                Seis paradas. Uma{" "}
                 <span className="italic text-gold">só rota</span> inesquecível.
               </h2>
             </div>
@@ -187,13 +193,9 @@ export function Roteiros() {
               className={
                 i === 0
                   ? "md:col-span-4 md:row-span-2"
-                  : i === 1
+                  : i <= 2
                     ? "md:col-span-2"
-                    : i === 2
-                      ? "md:col-span-2"
-                      : i === 3
-                        ? "md:col-span-3"
-                        : "md:col-span-3"
+                    : "md:col-span-2"
               }
             >
               <RoteiroCard {...r} large={i === 0} />
@@ -214,7 +216,7 @@ const STEPS = [
   },
   {
     t: "Embarque",
-    d: "A saída acontece pelo Porto Escarpas, em Capitólio/MG.",
+    d: "A saída acontece pelo Porto Marina Escarpas, em Capitólio/MG.",
   },
   {
     t: "Passeio",
@@ -297,7 +299,7 @@ const DIFF_ITEMS = [
   {
     icon: Waves,
     t: "Jet Ski Opcional",
-    d: "Moto aquática disponível como adicional para complementar a experiência durante o passeio.",
+    d: "Moto aquática disponível como opção de locação para complementar a experiência durante o passeio.",
   },
   {
     icon: LifeBuoy,
@@ -307,7 +309,7 @@ const DIFF_ITEMS = [
   {
     icon: Music4,
     t: "Som & Área Gourmet",
-    d: "Estrutura com som JBL, cooler, geleira e espaço gourmet completo a bordo.",
+    d: "Estrutura com som JBL, churrasqueira, starlink, geleira e espaço gourmet completo a bordo.",
   },
   {
     icon: PawPrint,
@@ -364,7 +366,7 @@ export function Differentials() {
 
 export function Stats() {
   const stats = [
-    { n: 1000, s: "+", l: "Horas náuticas em Furnas" },
+    { n: 1200, s: "+", l: "Horas náuticas em Furnas" },
     { n: 5, s: ".0", l: "Avaliação média" },
     { n: 15, s: "+", l: "Anos de experiência" },
     { n: 100, s: "%", l: "Clientes satisfeitos" },
@@ -501,14 +503,12 @@ export function Tipos() {
 /* ---------------- INCLUSOS ---------------- */
 
 const INCLUSOS = [
-  { i: Snowflake, t: "Cooler com gelo" },
   { i: Wine, t: "Bebidas geladas" },
   { i: Music2, t: "Som Bluetooth" },
   { i: LifeBuoy, t: "Coletes salva-vidas" },
   { i: Sailboat, t: "Boia rebocável" },
   { i: Fuel, t: "Combustível incluso" },
   { i: ShieldCheck, t: "Piloto experiente" },
-  { i: Camera, t: "Pacote fotos opcional" },
 ];
 
 export function Inclusos() {
@@ -586,7 +586,7 @@ export function Pilot() {
           <div className="mt-10 grid grid-cols-3 gap-6">
             {[
               { k: "15+", l: "Anos de experiência" },
-              { k: "1.036+", l: "Horas náuticas" },
+              { k: "1.200+", l: "Horas náuticas" },
               { k: "MAF", l: "Certificação Marinha" },
             ].map((m) => (
               <div key={m.l} className="border-t border-gold/40 pt-4">

@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "O que está incluso?",
-    a: "O passeio inclui combustível, piloto certificado, coletes higienizados, cooler com gelo, som JBL e área gourmet a bordo.",
+    a: "O passeio inclui combustível, piloto certificado, coletes higienizados, som JBL, churrasqueira, starlink e área gourmet a bordo.",
   },
   {
     q: "Posso levar meu pet?",
@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: "Qual é o ponto de saída?",
-    a: "As saídas acontecem pelo Porto Escarpas, em Capitólio/MG.",
+    a: "As saídas acontecem pelo Porto Marina Escarpas, em Capitólio/MG.",
   },
 ];
 

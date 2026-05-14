@@ -26,17 +26,18 @@ export function Experience() {
           </h2>
           <p className="mt-8 text-lg text-ice/70 leading-relaxed font-light">
             A FS YACHTS 290 Concept foi preparada para grupos de até 12 pessoas,
-            com som JBL, área gourmet, cooler completo e espaço confortável para
-            aproveitar no seu ritmo. Os roteiros passam por cânions, cachoeiras,
-            paradas para banho e pontos conhecidos da região.
+            com som JBL, área gourmet, churrasqueira, starlink e espaço
+            confortável para aproveitar no seu ritmo. Os roteiros passam por
+            cânions, cachoeiras, paradas para banho e pontos conhecidos da
+            região.
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-6">
             {[
               { k: "Capacidade", v: "Até 12 pessoas" },
               { k: "Duração", v: "Passeios de 3h a 7h" },
-              { k: "Conforto", v: "Som & cooler completo" },
-              { k: "Saída", v: "Porto Escarpas, Capitólio/MG" },
+              { k: "Conforto", v: "Som & churrasqueira" },
+              { k: "Saída", v: "Porto Marina Escarpas, Capitólio/MG" },
             ].map((d) => (
               <div key={d.k} className="border-l border-gold/40 pl-4">
                 <div className="text-[10px] uppercase tracking-[0.25em] text-gold/80">

@@ -66,10 +66,11 @@ export function Testimonials() {
             <ChevronLeft className="w-5 h-5" />
           </button>
           <div className="flex gap-2">
-            {TESTIMONIALS.map((_, k) => (
+            {TESTIMONIALS.map((t, k) => (
               <button
                 key={k}
                 onClick={() => setI(k)}
+                aria-label={`Depoimento ${k + 1} de ${TESTIMONIALS.length} - ${t.n}`}
                 className={`h-1.5 rounded-full transition-all ${
                   k === i ? "w-10 bg-gold" : "w-2 bg-ice/30"
                 }`}

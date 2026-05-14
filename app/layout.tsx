@@ -183,7 +183,7 @@ const jsonLd = {
           name: "Qual é o ponto de saída?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "As saídas acontecem pelo Porto Escarpas, em Capitólio/MG.",
+            text: "As saídas acontecem pelo Porto Marina Escarpas, em Capitólio/MG.",
           },
         },
       ],
