@@ -51,7 +51,7 @@ export function Navbar() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav aria-label="Navegação principal - NT Passeios Náuticos" className="hidden lg:flex items-center gap-8">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -85,7 +85,7 @@ export function Navbar() {
         </div>
 
         {open && (
-          <div className="lg:hidden mt-2 glass rounded-3xl p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
+          <nav aria-label="Navegação móvel NT Passeios Náuticos" className="lg:hidden mt-2 glass rounded-3xl p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -105,7 +105,7 @@ export function Navbar() {
             >
               <MessageCircle className="w-4 h-4" /> Reservar pelo WhatsApp
             </a>
-          </div>
+          </nav>
         )}
       </div>
     </header>

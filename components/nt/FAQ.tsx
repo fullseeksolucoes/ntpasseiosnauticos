@@ -35,7 +35,7 @@ const FAQS = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faq" className="relative py-32 md:py-40 px-6">
+    <section id="faq" aria-label="Perguntas frequentes sobre os passeios NT Passeios Náuticos" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <div className="text-center mb-16">
@@ -51,11 +51,16 @@ export function FAQ() {
         <div className="divide-y divide-border">
           {FAQS.map((f, i) => {
             const isOpen = open === i;
+            const panelId = `faq-panel-${i}`;
+            const buttonId = `faq-button-${i}`;
             return (
               <Reveal key={f.q} delay={i * 0.05}>
                 <button
+                  id={buttonId}
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left py-8 flex items-start gap-6 group"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
                 >
                   <span className="font-mono text-xs text-gold/70 mt-2">
                     0{i + 1}
@@ -65,6 +70,9 @@ export function FAQ() {
                       {f.q}
                     </span>
                     <motion.span
+                      id={panelId}
+                      role="region"
+                      aria-labelledby={buttonId}
                       initial={false}
                       animate={{
                         height: isOpen ? "auto" : 0,

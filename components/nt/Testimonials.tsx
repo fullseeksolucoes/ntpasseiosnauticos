@@ -31,29 +31,31 @@ const TESTIMONIALS = [
 export function Testimonials() {
   const [i, setI] = useState(0);
   return (
-    <section className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
+    <section aria-label="Depoimentos de clientes sobre os passeios náuticos" className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
       <div className="mx-auto max-w-5xl text-center">
         <Reveal>
           <Quote className="w-10 h-10 text-gold mx-auto mb-8" />
         </Reveal>
         <Reveal delay={0.1}>
-          <motion.blockquote
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-display text-3xl md:text-5xl text-ice leading-[1.2] text-balance italic"
-          >
-            &ldquo;{TESTIMONIALS[i].q}&rdquo;
-          </motion.blockquote>
-          <div className="mt-10">
-            <div className="font-display text-xl text-gold">
-              {TESTIMONIALS[i].n}
-            </div>
-            <div className="text-[11px] uppercase tracking-[0.25em] text-ice/60 mt-1">
-              {TESTIMONIALS[i].c}
-            </div>
-          </div>
+          <figure>
+            <motion.blockquote
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-display text-3xl md:text-5xl text-ice leading-[1.2] text-balance italic"
+            >
+              &ldquo;{TESTIMONIALS[i].q}&rdquo;
+            </motion.blockquote>
+            <figcaption className="mt-10">
+              <cite className="font-display text-xl text-gold not-italic">
+                {TESTIMONIALS[i].n}
+              </cite>
+              <div className="text-[11px] uppercase tracking-[0.25em] text-ice/60 mt-1">
+                {TESTIMONIALS[i].c}
+              </div>
+            </figcaption>
+          </figure>
         </Reveal>
         <div className="mt-12 flex items-center justify-center gap-6">
           <button

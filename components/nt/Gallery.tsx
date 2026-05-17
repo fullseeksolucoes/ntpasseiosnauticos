@@ -24,6 +24,7 @@ export function Gallery() {
   return (
     <section
       id="galeria"
+      aria-label="Galeria de fotos dos passeios NT Passeios Náuticos em Capitólio"
       className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]"
     >
       <div className="mx-auto max-w-7xl">

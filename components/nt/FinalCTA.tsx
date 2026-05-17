@@ -19,6 +19,7 @@ export function FinalCTA() {
   return (
     <section
       ref={ref}
+      aria-label="Chamada final para reservar passeio náutico NT Passeios Náuticos"
       className="relative h-[90vh] min-h-150 w-full overflow-hidden"
     >
       <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%]">

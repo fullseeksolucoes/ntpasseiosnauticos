@@ -12,6 +12,7 @@ export function Experience() {
   return (
     <section
       id="experiencia"
+      aria-label="A experiência do passeio náutico NT em Capitólio"
       className="relative py-32 md:py-40 px-6 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-radial-gold opacity-30 pointer-events-none" />

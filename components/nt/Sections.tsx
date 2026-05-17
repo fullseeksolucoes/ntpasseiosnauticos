@@ -48,7 +48,7 @@ export function Benefits() {
     },
   ];
   return (
-    <section className="relative py-20 md:py-28 px-6">
+    <section aria-label="Benefícios dos passeios NT Passeios Náuticos" className="relative py-20 md:py-28 px-6">
       <div className="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-px bg-border/40 rounded-3xl overflow-hidden">
         {items.map((it, i) => (
           <Reveal key={i} delay={i * 0.08} className="bg-background">
@@ -129,7 +129,7 @@ function RoteiroCard({
     >
       <Image
         src={img}
-        alt={title}
+        alt={`${title} - ponto turístico em Capitólio, MG, durante passeio náutico pela Represa de Furnas`}
         fill
         className="object-cover transition-transform duration-1500 ease-out group-hover:scale-110"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -230,7 +230,7 @@ const STEPS = [
 
 export function Timeline() {
   return (
-    <section id="como-funciona" className="relative py-32 md:py-40 px-6">
+    <section id="como-funciona" aria-label="Como funciona o passeio náutico - etapas" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="text-center mb-20">
@@ -320,7 +320,7 @@ const DIFF_ITEMS = [
 
 export function Differentials() {
   return (
-    <section className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
+    <section aria-label="Diferenciais da NT Passeios Náuticos em Capitólio" className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="grid md:grid-cols-2 gap-10 items-end mb-16">
@@ -372,8 +372,8 @@ export function Stats() {
     { n: 100, s: "%", l: "Clientes satisfeitos" },
   ];
   return (
-    <section className="relative py-24 md:py-32 px-6 overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
+    <section aria-label="Estatísticas e números da NT Passeios Náuticos" className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 opacity-30">
         <Image
           src="/sunset.webp"
           alt=""
@@ -435,7 +435,7 @@ const WHATSAPP =
 
 export function Tipos() {
   return (
-    <section className="relative py-32 md:py-40 px-6">
+    <section aria-label="Tipos de passeio disponíveis na NT Passeios Náuticos" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="mb-16 text-center">
@@ -513,7 +513,7 @@ const INCLUSOS = [
 
 export function Inclusos() {
   return (
-    <section className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
+    <section aria-label="Itens inclusos no passeio náutico NT Passeios Náuticos" className="relative py-32 md:py-40 px-6 bg-[oklch(0.16_0.04_245)]">
       <div className="mx-auto max-w-7xl grid lg:grid-cols-12 gap-16 items-center">
         <Reveal className="lg:col-span-5">
           <div className="text-[11px] uppercase tracking-[0.35em] text-gold mb-4">
@@ -552,13 +552,13 @@ export function Inclusos() {
 
 export function Pilot() {
   return (
-    <section id="piloto" className="relative py-32 md:py-40 px-6">
+    <section id="piloto" aria-label="Conheça seu capitão Edson Maciel" className="relative py-32 md:py-40 px-6">
       <div className="mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 items-center">
         <Reveal className="lg:col-span-5">
           <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-elegant">
             <Image
               src="/piloto.webp"
-              alt="Capitão da NT Passeios Náuticos"
+              alt="Edson Maciel, capitão certificado da NT Passeios Náuticos na Represa de Furnas, Capitólio MG"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
@@ -607,7 +607,7 @@ export function Pilot() {
 
 export function Footer() {
   return (
-    <footer className="relative px-6 pt-20 pb-10 bg-[oklch(0.13_0.04_245)] border-t border-border">
+    <footer aria-label="Rodapé NT Passeios Náuticos - contato e navegação" className="relative px-6 pt-20 pb-10 bg-[oklch(0.13_0.04_245)] border-t border-border">
       <div className="text-gold/60 -mt-20 mb-12">
         <WaveDivider className="w-full h-12" />
       </div>
@@ -757,7 +757,7 @@ export function FloatingWhatsApp() {
       href={WHATSAPP_LINK}
       target="_blank"
       rel="noreferrer"
-      aria-label="Falar no WhatsApp"
+      aria-label="Fale conosco pelo WhatsApp - NT Passeios Náuticos"
       className="fixed bottom-6 right-6 z-50 group"
     >
       <span className="relative flex">

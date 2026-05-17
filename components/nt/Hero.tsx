@@ -29,6 +29,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
+      aria-label="Hero - Passeios náuticos NT Passeios Náuticos em Capitólio, MG"
       className="relative h-svh min-h-175 w-full overflow-hidden"
     >
       <motion.div style={{ y, scale }} className="absolute inset-0">

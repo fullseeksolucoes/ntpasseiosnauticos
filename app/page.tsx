@@ -20,7 +20,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative bg-background text-foreground overflow-x-hidden">
+    <main className="relative bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
       <Benefits />
@@ -38,6 +38,6 @@ export default function Home() {
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
-    </div>
+    </main>
   );
 }
