@@ -622,11 +622,11 @@ export function Footer() {
               className="h-20 w-auto"
             />
           </Link>
-          <p className="mt-6 text-ice/65 font-light max-w-md leading-relaxed">
+          <p className="mt-6 text-ice/80 font-light max-w-md leading-relaxed">
             Uma experiência náutica premium pela Represa de Furnas — cânions,
             cachoeiras e pôr do sol em uma jornada inesquecível.
           </p>
-          <div className="mt-8 font-mono text-[11px] text-ice/40 tracking-widest">
+          <div className="mt-8 font-mono text-[11px] text-ice/60 tracking-widest">
             20°36′53″S · 46°02′53″W
           </div>
         </div>
@@ -635,7 +635,7 @@ export function Footer() {
           <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-5">
             Navegação
           </div>
-          <ul className="space-y-3 text-ice/75 text-sm">
+          <ul className="space-y-3 text-ice/85 text-sm">
             <li>
               <Link href="#experiencia" className="hover:text-gold">
                 A Experiência
@@ -668,7 +668,7 @@ export function Footer() {
           <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-5">
             Contato
           </div>
-          <ul className="space-y-3 text-ice/75 text-sm">
+          <ul className="space-y-3 text-ice/85 text-sm">
             <li className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-gold" /> +55 (31) 99727-9740
             </li>
@@ -724,7 +724,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl mt-16 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.25em] text-ice/40">
+      <div className="mx-auto max-w-7xl mt-16 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.25em] text-ice/60">
         <span>
           © {new Date().getFullYear()} NT Passeios Náuticos · Todos os direitos
           reservados
